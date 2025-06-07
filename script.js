@@ -45,7 +45,8 @@ function compareMove(player,computer){
     score.losses += 1;
    }                
    localStorage.setItem('score',JSON.stringify(score));
-document.querySelector('.results').innerHTML = `you won ${score.wins} times, lost ${score.losses} times, and tied ${score.ties} times!!!`;
+   document.querySelector('.score_board').innerHTML = `you won ${score.wins} times, lost ${score.losses} times, and tied ${score.ties} times!!!`;
+   document.querySelector('.move_tracker').innerHTML = `your move is ${player} and computer move is ${computer} `;
 }
 
 const scoreReset = document.getElementById('reset_score');
@@ -57,5 +58,6 @@ function clear(){
     score.wins = 0;
     score.losses = 0;
     localStorage.removeItem('score');
-    document.querySelector('.results').innerHTML = `you won ${score.wins} times, lost ${score.losses} times, and tied ${score.ties} times!!!`;
+    document.querySelector('.score_board').innerHTML = `you won ${score.wins} times, lost ${score.losses} times, and tied ${score.ties} times!!!`;
+   
 }

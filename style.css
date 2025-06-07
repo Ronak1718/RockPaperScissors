@@ -44,7 +44,7 @@ body{
      font-family: cursive;
     color: rgb(185, 150, 9);
 }
-.results{
+.results, .move_tracker, .score_board{
     font-family: cursive;
     color: rgb(185, 150, 9);
     font-size: 20px;
